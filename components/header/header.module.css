@@ -1,0 +1,37 @@
+.header {
+	position: relative;
+	width: 100%;
+	background-color: #282626;
+	transition: all 0.3s ease;
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.header.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999999;
+	--tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+	--tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+	animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.hdr-cover {
+	height: 60px;
+	transition: height 0.3s ease;
+}
