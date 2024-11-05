@@ -3,8 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import { Inter, Dancing_Script, Exo_2 } from 'next/font/google';
-import { Provider } from 'react-redux'
-import { store } from "@/store";
+import { Providers } from "@/lib/Providers";
 
 
 const inter = Inter({
@@ -46,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // <Provider store={store}>
+    <Providers>
     <html lang="en">
       <body
         className={`${inter.variable} ${dancing_script.variable} ${exo_2.variable} antialiased`}
@@ -55,6 +54,6 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-    // </Provider>
-  );
+    </Providers>
+  )
 }

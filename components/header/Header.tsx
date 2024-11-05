@@ -3,14 +3,15 @@ import React, { useEffect, useState } from 'react';
 import styles from './header.module.css';
 import Image from 'next/image';
 import Button from '../Button';
-import { useDispatch, useSelector } from 'react-redux';
-import { activePage, setCurrentPage } from '@/store/slices/page_slice';
-
+import { useDispatch, useSelector } from '@/lib/store';
+import { useAppSelector } from '@/lib/hooks';
+import { setActivePage } from '@/lib/features/header/headerSlice';
 
 export default function Header() {
+
     const dispatch = useDispatch();
-    const activepage = useSelector(activePage);
     const [isSticky, setIsSticky] = useState(false);
+    const { activePage } = useSelector((state) => state.header);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -27,17 +28,19 @@ export default function Header() {
     }, []);
 
     function handleHome(): void {
-        dispatch(setCurrentPage('home'))
+        dispatch(setActivePage('home'))
     }
 
     function handleAbout(): void {
-        dispatch(setCurrentPage('about'))
+        dispatch(setActivePage('about'))
     }
 
     function handleResume(): void {
+        dispatch(setActivePage('resume'))
     }
 
     function handleContact(): void {
+        dispatch(setActivePage('contact'))
     }
 
     return (
@@ -55,17 +58,18 @@ export default function Header() {
                     </div>
                     <div className='flex flex-row space-x-2'>
                         <Button text="Home"
-                            className={`${activepage === 'home' ? 'text-yellow-200' : null}`}
+                            className={`${activePage === 'home' ? 'text-[#fffcfa]' : 'text-[#878584]'}`}
                             onClick={handleHome}
                         />
                         <Button text="About"
-                            className={`${activepage === 'about' ? 'text-yellow-200' : null}`}
-
+                            className={`${activePage === 'about' ? 'text-[#fffcfa]' : 'text-[#878584]'}`}
                             onClick={handleAbout} />
                         <Button text="Resume"
+                        className={`${activePage === 'resume' ? 'text-[#fffcfa]' : 'text-[#878584]'}`}
                             onClick={handleResume} />
 
                         <Button text="Contact"
+                            className={`${activePage === 'contact' ? 'text-[#fffcfa]' : 'text-[#878584]'}`}
                             onClick={handleContact} />
                     </div>
                 </div>
