@@ -4,6 +4,7 @@
     "npm:@emotion/react@^11.13.3": "11.13.3_react@18.3.1",
     "npm:@mui/material@^6.1.6": "6.1.6_@types+react@18.3.12_react@18.3.1_react-dom@18.3.1__react@18.3.1",
     "npm:@reduxjs/toolkit@^2.3.0": "2.3.0_redux@5.0.1",
+    "npm:@remixicon/react@^4.5.0": "4.5.0_react@18.3.1",
     "npm:@types/node@20": "20.17.6",
     "npm:@types/react-dom@18": "18.3.1",
     "npm:@types/react@18": "18.3.12",
@@ -477,6 +478,12 @@
         "redux",
         "redux-thunk",
         "reselect"
+      ]
+    },
+    "@remixicon/react@4.5.0_react@18.3.1": {
+      "integrity": "sha512-Xr20SxMpRNlgXZnoF5BCMyZuQEhXY3yJCyms8kxB/vJCCiV1nWdiO48XqRG5LBd1192iSHC4m658AIWi6rmBFg==",
+      "dependencies": [
+        "react@18.3.1"
       ]
     },
     "@rtsao/scc@1.1.0": {
@@ -2786,6 +2793,7 @@
         "npm:@emotion/react@^11.13.3",
         "npm:@mui/material@^6.1.6",
         "npm:@reduxjs/toolkit@^2.3.0",
+        "npm:@remixicon/react@^4.5.0",
         "npm:@types/node@20",
         "npm:@types/react-dom@18",
         "npm:@types/react@18",

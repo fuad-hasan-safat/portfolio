@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/header/Header";
 import { Inter, Dancing_Script, Exo_2, Playwrite_US_Modern } from 'next/font/google';
 import { Providers } from "@/lib/Providers";
 
@@ -59,7 +58,6 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${dancing_script.variable} ${exo_2.variable} ${geistSans.variable} ${geistMono.variable} ${playwrite.variable} antialiased`}
       >
-        <Header />
         {children}
       </body>
     </html>

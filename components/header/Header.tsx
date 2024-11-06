@@ -4,20 +4,40 @@ import React, { useEffect, useState } from 'react';
 import styles from './header.module.css';
 import Image from 'next/image';
 import Button from '../Button';
-import { useDispatch, useSelector } from '@/lib/store';
+import { RootState, useDispatch, useSelector } from '@/lib/store';
 import { setActivePage } from '@/lib/features/header/headerSlice';
 import { useRouter } from 'next/navigation';
 
-export default function Header() {
-    const router = useRouter();
+type SectionRefs = {
+    home: React.RefObject<HTMLElement>;
+    about: React.RefObject<HTMLElement>;
+    resume: React.RefObject<HTMLElement>;
+    contact: React.RefObject<HTMLElement>;
+};
+
+interface HeaderProps {
+    sectionRefs: SectionRefs;
+}
+
+
+export default function Header({ sectionRefs }: HeaderProps) {
+
     const dispatch = useDispatch();
     const [isSticky, setIsSticky] = useState(false);
-    const { activePage } = useSelector((state) => state.header);
+    const activePage = useSelector((state: RootState) => state.header.activePage);
 
-    const handleNavigation = (page : 'home' | 'about' | 'resume' | 'contact') => {
+    const handleNavigation = (page: keyof SectionRefs) => {
         dispatch(setActivePage(page));
-        router.push(`#${page}`);
+        
+        // Smooth scroll to the section
+        if (sectionRefs[page].current) {
+            sectionRefs[page].current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
     };
+
 
     useEffect(() => {
         const handleScroll = () => setIsSticky(window.scrollY > 100);
