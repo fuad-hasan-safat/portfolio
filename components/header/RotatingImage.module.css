@@ -4,6 +4,7 @@
     height: 400px;
     display: inline-block;
     float: right;
+    overflow: hidden;
   }
   
   .profileImage {
