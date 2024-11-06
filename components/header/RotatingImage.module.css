@@ -1,0 +1,45 @@
+.imageContainer {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    float: right;
+  }
+  
+  .profileImage {
+    border-radius: 50%;
+  }
+  
+  .ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    animation: rotateRing 7s linear infinite;
+  }
+  
+  .ring:first-of-type {
+    border-top: 10px solid #ff6b6b; /* First ring color */
+    border-left: 10px solid #ff6b6b;
+    transform: rotate(45deg); /* Offset the first ring slightly */
+  }
+  
+  .ring:last-of-type {
+    border-right: 10px solid #4d96ff; /* Second ring color */
+    border-bottom: 10px solid #4d96ff;
+    animation-direction: reverse;
+    transform: rotate(-45deg); /* Offset the second ring in the opposite direction */
+  }
+  
+  @keyframes rotateRing {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
