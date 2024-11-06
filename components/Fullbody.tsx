@@ -26,6 +26,7 @@ export default function Fullbody() {
         };
         const observer = new IntersectionObserver(handleIntersection, {
             root: null,
+            rootMargin: "0px 0px 0px 0px", // Offset by 110px from the top
             threshold: 0.7, // Trigger when at least 10% of the element is visible
         });
 
@@ -42,22 +43,25 @@ export default function Fullbody() {
     return (
         <>
 
-            <section id="home" ref={sectionRefs.home} className="w-full h-screen">
+            <section id="home" ref={sectionRefs.home} className="w-full h-screen pt-[110px]">
                 <HomePage />
             </section>
 
+            
+            <section id="about" ref={sectionRefs.about} className="w-full h-screen pt-[110px]">
             <h1>ABOUT</h1>
-            <section id="about" ref={sectionRefs.about} className="w-full h-screen">
                 <HomePage />
             </section>
 
+           
+            <section id="resume" ref={sectionRefs.resume} className="w-full h-screen pt-[110px]">
             <h1>Resume</h1>
-            <section id="resume" ref={sectionRefs.resume} className="w-full h-screen">
                 <HomePage />
             </section>
 
+            
+            <section id="contact" ref={sectionRefs.contact} className="w-full h-screen pt-[110px]">
             <h1>CONTACT</h1>
-            <section id="contact" ref={sectionRefs.contact} className="w-full h-screen">
                 <HomePage />
             </section>
         </>
