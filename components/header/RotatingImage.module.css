@@ -21,17 +21,30 @@
     animation: rotateRing 7s linear infinite;
   }
   
-  .ring:first-of-type {
-    border-top: 10px solid #ff6b6b; /* First ring color */
-    border-left: 10px solid #ff6b6b;
-    transform: rotate(45deg); /* Offset the first ring slightly */
+  /* First ring - 25% in red */
+  .ring:nth-of-type(1) {
+    border-top: 10px solid #7ef44781; /* Visible quarter */
+    transform: rotate(45deg); /* Offset to position correctly */
   }
   
-  .ring:last-of-type {
-    border-right: 10px solid #4d96ff; /* Second ring color */
-    border-bottom: 10px solid #4d96ff;
+  /* Second ring - 25% in green */
+  .ring:nth-of-type(2) {
+    border-right: 10px solid #f1f13699; /* Visible quarter */
     animation-direction: reverse;
-    transform: rotate(-45deg); /* Offset the second ring in the opposite direction */
+    transform: rotate(-45deg); /* Offset to position correctly */
+  }
+  
+  /* Third ring - 25% in orange */
+  .ring:nth-of-type(3) {
+    border-bottom: 10px solid #30c1ff98; /* Visible quarter */
+    transform: rotate(120deg); /* Offset to position correctly */
+  }
+  
+  /* Fourth ring - 25% in blue */
+  .ring:nth-of-type(4) {
+    border-left: 10px solid #fa5eff9b; /* Visible quarter */
+    animation-direction: reverse;
+    transform: rotate(-120deg); /* Offset to position correctly */
   }
   
   @keyframes rotateRing {

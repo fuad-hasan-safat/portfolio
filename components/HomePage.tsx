@@ -160,8 +160,10 @@ export default function HomePage() {
                         width={400}
                         height={400}
                     />
-                    <div className={styles.ring}></div>
-                    <div className={styles.ring}></div>
+                    <div className={`${styles.ring}`}></div>
+                    <div className={`${styles.ring}`}></div>
+                    <div className={`${styles.ring}`}></div>
+                    <div className={`${styles.ring}`}></div>
                 </div>
             </div>
         </div>
