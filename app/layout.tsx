@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/header/Header";
-import { Inter, Dancing_Script, Exo_2 } from 'next/font/google';
+import { Inter, Dancing_Script, Exo_2, Playwrite_US_Modern } from 'next/font/google';
 import { Providers } from "@/lib/Providers";
 
 
@@ -22,6 +22,15 @@ const exo_2 = Exo_2({
   variable: "--exo_2",
   weight: ["400", "500", "600", "700"]
 });
+
+const playwrite = Playwrite_US_Modern({
+  adjustFontFallback: true,
+  display: "swap",
+  fallback: ["serif", "sans-serif"],
+  variable: "--playwrite",
+  weight: ["400", "100", "200", "300"]
+});
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -48,7 +57,7 @@ export default function RootLayout({
     <Providers>
     <html lang="en">
       <body
-        className={`${inter.variable} ${dancing_script.variable} ${exo_2.variable} antialiased`}
+        className={`${inter.variable} ${dancing_script.variable} ${exo_2.variable} ${geistSans.variable} ${geistMono.variable} ${playwrite.variable} antialiased`}
       >
         <Header />
         {children}

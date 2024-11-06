@@ -15,8 +15,8 @@ const config: Config = {
       fontFamily: {
         inter: ["var(--inter)", "sans-serif"],
         dancing_script: ["var(--dancing_script)"],
-        exo_2: ["var(--exo_2)"]
-
+        exo_2: ["var(--exo_2)"],
+        playwrite: ["var(--playwrite)"],
       },
     },
   },
