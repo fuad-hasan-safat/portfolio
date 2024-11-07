@@ -68,13 +68,13 @@ export default function Header({ sectionRefs }: HeaderProps) {
                 </div>
                 <div className="flex flex-row space-x-2">
                     <Button text="Home" onClick={() => handleNavigation('home')}
-                        className={activePage === 'home' ? 'text-[#fffcfa]' : 'text-[#474645]'} />
+                        className={activePage === 'home' ? 'text-[#f6e054]' : 'text-[#c8c5c5]'} />
                     <Button text="About" onClick={() => handleNavigation('about')}
-                        className={activePage === 'about' ? 'text-[#fffcfa]' : 'text-[#474645]'} />
+                        className={activePage === 'about' ? 'text-[#f6e054]' : 'text-[#c8c5c5]'} />
                     <Button text="Resume" onClick={() => handleNavigation('resume')}
-                        className={activePage === 'resume' ? 'text-[#fffcfa]' : 'text-[#474645]'} />
+                        className={activePage === 'resume' ? 'text-[#f6e054]' : 'text-[#c8c5c5]'} />
                     <Button text="Contact" onClick={() => handleNavigation('contact')}
-                        className={activePage === 'contact' ? 'text-[#fffcfa]' : 'text-[#474645]'} />
+                        className={activePage === 'contact' ? 'text-[#f6e054]' : 'text-[#c8c5c5]'} />
                 </div>
             </div>
         </header>
