@@ -1,9 +1,7 @@
 // Import Redux-related functions and actions
 "use client"
-import { useSelector, useDispatch, RootState } from "../../lib/store";
+import { useSelector, useDispatch } from "../../lib/store";
 import { increment, decrement } from "@/lib/features/counter/counterSlice"; 
-import Button from "@/components/Button";
-import { useAppSelector } from "@/lib/hooks";
 
 
 

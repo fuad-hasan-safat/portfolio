@@ -5,26 +5,30 @@ import { useDispatch } from '@/lib/store';
 import { setActivePage } from '@/lib/features/header/headerSlice';
 import Header from './header/Header';
 import Resume from './Resume';
-import styles from '../components/header/header.module.css'
 
 export default function Fullbody() {
     const dispatch = useDispatch();
-    const sectionRefs = {
-        home: useRef(null),
-        about: useRef(null),
-        resume: useRef(null),
-        contact: useRef(null),
+    const sectionRefs: { 
+        home: React.RefObject<HTMLElement>; 
+        about: React.RefObject<HTMLElement>; 
+        resume: React.RefObject<HTMLElement>; 
+        contact: React.RefObject<HTMLElement>; 
+    } = {
+        home: useRef<HTMLElement>(null),
+        about: useRef<HTMLElement>(null),
+        resume: useRef<HTMLElement>(null),
+        contact: useRef<HTMLElement>(null),
     };
 
+
     useEffect(() => {
-        const handleIntersection = (entries: any[]) => {
+        const handleIntersection = (entries: IntersectionObserverEntry[]) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    dispatch(setActivePage(entry.target.id));
+                    dispatch(setActivePage(entry.target.id as keyof typeof sectionRefs));
                 }
             });
         };
-
         const observer = new IntersectionObserver(handleIntersection, {
             root: null,
             threshold: 0.7,
