@@ -1,3 +1,4 @@
+/* Header Styles */
 .header {
 	position: relative;
 	width: 100%;
@@ -12,28 +13,51 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 9999999;
+	z-index: 9999;
 	backdrop-filter: blur(5px);
-	--tw-shadow-color: #0e72d6;
-	--tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-	--tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+	box-shadow: 0 25px 50px -12px rgba(14, 114, 214, 0.25);
 	animation: slideDown 0.3s ease forwards;
 }
 
+/* RGB Animated Text */
+.text-rgb-animated {
+	animation: rgbLight 4s infinite;
+	background: linear-gradient(50deg, red, orange, yellow, green, cyan, blue, violet);
+	-webkit-background-clip: text;
+	color: transparent;
+	font-weight: bold;
+	display: inline-block;
+}
+
+/* Header Slide Down Animation */
 @keyframes slideDown {
 	0% {
 		opacity: 0;
 		transform: translateY(-20px);
 	}
-
 	100% {
 		opacity: 1;
 		transform: translateY(0);
 	}
 }
 
+/* RGB Light Animation */
+@keyframes rgbLight {
+	0% {
+		filter: hue-rotate(0deg);
+	}
+	100% {
+		filter: hue-rotate(360deg);
+	}
+}
+
+/* Header Cover */
 .hdr-cover {
 	height: 60px;
 	transition: height 0.3s ease;
+}
+
+/* Sticky Header Height Reduction */
+.header.sticky .hdr-cover {
+	height: 50px; /* Reduce header height when sticky */
 }

@@ -4,6 +4,7 @@ import HomePage from './HomePage';
 import { useDispatch } from '@/lib/store';
 import { setActivePage } from '@/lib/features/header/headerSlice';
 import Header from './header/Header';
+import Resume from './Resume';
 
 export default function Fullbody() {
     const dispatch = useDispatch();
@@ -46,21 +47,26 @@ export default function Fullbody() {
 
                 <h1 className='fixed top-[50%] right-[-42px] px-[15px] py-[5px]  text-[26px]  text-slate-400 hover:text-white font-exo_2 shadow-sm  shadow-gray-400 hover:shadow-md hover:shadow-gray-200 z-[99999] tracking-[10px] rotate-[90deg] cursor-pointer'> Fuad </h1>
 
-                <section id="home" ref={sectionRefs.home} className="w-full h-screen pt-[110px]">
+                <section id="home" ref={sectionRefs.home} className="pt-[110px]">
                     <HomePage />
                 </section>
 
-                <section id="about" ref={sectionRefs.about} className="w-full h-screen pt-[110px]">
+                <section id="about" ref={sectionRefs.about} className="pt-[110px]">
                     <h1>ABOUT</h1>
                     <HomePage />
                 </section>
 
-                <section id="resume" ref={sectionRefs.resume} className="w-full h-screen pt-[110px]">
-                    <h1>Resume</h1>
-                    <HomePage />
+                <section id="resume" ref={sectionRefs.resume} className="pt-[110px] ">
+                    <div className='flex justify-center items-center'>
+                        <div>
+                            <h6 className='text-yellow-400 font-thin text-[16px]'>1 year of  experience in web development</h6>
+                            <h1 className='text-4xl font-semibold text-slate-300 tracking-[10px] pt-[10px]'>My Resume</h1>
+                        </div>
+                    </div>
+                    <Resume />
                 </section>
 
-                <section id="contact" ref={sectionRefs.contact} className="w-full h-screen pt-[110px]">
+                <section id="contact" ref={sectionRefs.contact} className="pt-[110px]">
                     <h1>CONTACT</h1>
                     <HomePage />
                 </section>

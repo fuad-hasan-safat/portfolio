@@ -1,0 +1,30 @@
+/* Card.module.css */
+.container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .cgpa {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin: 8px 0;
+  }
+  
+  .content {
+    margin-top: 12px;
+  }
+  

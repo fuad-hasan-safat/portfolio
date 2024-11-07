@@ -64,7 +64,7 @@ export default function Header({ sectionRefs }: HeaderProps) {
                     <div className={`${styles1.ring}`}></div>
                     <div className={`${styles1.ring}`}></div>
                 </div>
-                    <p className="text-[20px] font-semibold">Fuad</p>
+                    <p className={`text-[20px] font-semibold tracking-widest}`}>Fuad</p>
                 </div>
                 <div className="flex flex-row space-x-2">
                     <Button text="Home" onClick={() => handleNavigation('home')}

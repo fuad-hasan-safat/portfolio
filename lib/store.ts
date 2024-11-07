@@ -6,7 +6,7 @@ import {
 } from 'react-redux';
 import counterReducer from '../lib/features/counter/counterSlice';
 import headerReducer from '../lib/features/header/headerSlice';
-
+import resumeReducer from '../lib/features/resume/resume-slice'
 
 export type AppDispatch = typeof store.dispatch;
 
@@ -14,6 +14,8 @@ export type AppDispatch = typeof store.dispatch;
 const rootReducer = combineReducers({
     count: counterReducer,
     header: headerReducer,
+    resume:  resumeReducer,
+
 
 });
 
