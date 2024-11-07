@@ -152,7 +152,7 @@ export default function HomePage() {
             </div>
             <div className="w-[50%]">
                 {/* <Image className='float-right' src="/profilepic/fuad.png" alt="fuad" width={400} height={400} /> */}
-                <div className={styles.imageContainer}>
+                <div className={`${styles.imageContainer} z-[999] shadow-lg shadow-slate-900 hover:shadow-slate-500`}>
                     <Image
                         className={`${styles.profileImage}`}
                         src="/profilepic/fuad.png"

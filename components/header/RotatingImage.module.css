@@ -45,7 +45,10 @@
   border-top: 10px solid #7ef44781;
   /* Visible quarter */
   transform: rotate(45deg);
+  z-index: 10;
   /* Offset to position correctly */
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
 }
 
 /* Second ring - 25% in green */
@@ -55,6 +58,10 @@
   animation-direction: reverse;
   transform: rotate(-45deg);
   /* Offset to position correctly */
+  z-index: 20;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+
 }
 
 /* Third ring - 25% in orange */
@@ -63,6 +70,9 @@
   /* Visible quarter */
   transform: rotate(120deg);
   /* Offset to position correctly */
+  z-index: 30;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
 }
 
 /* Fourth ring - 25% in blue */
@@ -72,6 +82,9 @@
   animation-direction: reverse;
   transform: rotate(-120deg);
   /* Offset to position correctly */
+  z-index: 40;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
 }
 
 @keyframes rotateRing {
