@@ -48,7 +48,7 @@ export default function Header({ sectionRefs }: HeaderProps) {
 
     return (
         <header className={`${styles.header} ${isSticky ? styles.sticky : ''}`}>
-            <div className="flex justify-between items-center h-[100px] px-[100px] text-[18px] font-exo_2 bg-[#212529]">
+            <div className="flex justify-between items-center h-[100px] px-[100px] text-[18px] font-exo_2">
                 <div className="flex flex-row items-center space-x-[10px]">
                     {/* <Image src={'/profilepic/fuad.png'} width={50} height={50} alt="" /> */}
                     <div className={styles1.imageContainer}>
@@ -68,13 +68,13 @@ export default function Header({ sectionRefs }: HeaderProps) {
                 </div>
                 <div className="flex flex-row space-x-2">
                     <Button text="Home" onClick={() => handleNavigation('home')}
-                        className={activePage === 'home' ? 'text-[#fffcfa]' : 'text-[#878584]'} />
+                        className={activePage === 'home' ? 'text-[#fffcfa]' : 'text-[#474645]'} />
                     <Button text="About" onClick={() => handleNavigation('about')}
-                        className={activePage === 'about' ? 'text-[#fffcfa]' : 'text-[#878584]'} />
+                        className={activePage === 'about' ? 'text-[#fffcfa]' : 'text-[#474645]'} />
                     <Button text="Resume" onClick={() => handleNavigation('resume')}
-                        className={activePage === 'resume' ? 'text-[#fffcfa]' : 'text-[#878584]'} />
+                        className={activePage === 'resume' ? 'text-[#fffcfa]' : 'text-[#474645]'} />
                     <Button text="Contact" onClick={() => handleNavigation('contact')}
-                        className={activePage === 'contact' ? 'text-[#fffcfa]' : 'text-[#878584]'} />
+                        className={activePage === 'contact' ? 'text-[#fffcfa]' : 'text-[#474645]'} />
                 </div>
             </div>
         </header>

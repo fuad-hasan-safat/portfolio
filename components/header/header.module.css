@@ -1,7 +1,7 @@
 .header {
 	position: relative;
 	width: 100%;
-	background-color: #282626;
+	background-color: #1684ebce;
 	transition: all 0.3s ease;
 	opacity: 1;
 	transform: translateY(0);
@@ -13,6 +13,8 @@
 	left: 0;
 	width: 100%;
 	z-index: 9999999;
+	backdrop-filter: blur(5px);
+	--tw-shadow-color: #0e72d6;
 	--tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 	--tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
