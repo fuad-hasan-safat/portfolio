@@ -61,3 +61,24 @@
 .header.sticky .hdr-cover {
 	height: 50px; /* Reduce header height when sticky */
 }
+
+.text3d {
+	position: relative;
+	color: #ffffff; /* Main text color */
+	font-weight: 700;
+	text-shadow:
+	1px 1px 1px #aaa,
+    1.5px 1.5px 1.5px #999,
+    2px 2px 2px #888,
+    2.5px 2.5px 2.5px #777,
+    3px 3px 3px #666,
+    3.5px 3.5px 3.5px #555,
+    4px 4px 4px #444,
+    4.5px 4.5px 4.5px #333,
+    5px 5px 5px #222;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 0.1em;
+	line-height: 1.5;
+	white-space: nowrap;
+  }

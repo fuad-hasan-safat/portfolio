@@ -70,37 +70,32 @@ export default function HomePage() {
                 </p>
 
                 <section id='sociallink' className='flex w-full flex-wrap content-between items-center pt-[100px]'>
-                    <div className='w-[50%]'>
-                        <h5 className='uppercase pb-[15px] tracking-[5px] font-semibold text-slate-400'>Find with me</h5>
+                    <div className="w-[50%]">
+                        <h5 className="uppercase pb-[15px] tracking-[5px] font-semibold text-slate-400">Find with me</h5>
+
                         <IconContainer
-                            customClass={'shadow-[#f95c5c] text-[#f95c5c] hover:scale-[1.2] hover:text-white hover:shadow-white'}
+                            customClass="animate-swapColors1 transition-all duration-300 ease-in-out"
                             isClickable={true}
                             onClick={openFacebookProfile}
                         >
-                            <RiFacebookBoxFill
-                            />
-
+                            <RiFacebookBoxFill />
                         </IconContainer>
 
                         <IconContainer
-                        customClass={'shadow-[#f9e15c] text-[#f9e15c] hover:scale-[1.2] hover:text-white hover:shadow-white'}
+                            customClass="animate-swapColors2 transition-all duration-300 ease-in-out"
+                            isClickable={true}
                             onClick={openInstagramProfile}
-                            isClickable={true}>
-                            <RiInstagramFill
-                            />
+                        >
+                            <RiInstagramFill />
                         </IconContainer>
 
-
                         <IconContainer
-                            customClass={'shadow-[#f9a85c] text-[#f9a85c] hover:text-white hover:shadow-white'}
+                            customClass="animate-swapColors3 transition-all duration-300 ease-in-out"
                             isClickable={true}
                             onClick={openLinkedInProfile}
                         >
-                            <RiLinkedinBoxFill
-                            />
-
+                            <RiLinkedinBoxFill />
                         </IconContainer>
-
                     </div>
                     <div className='w-[50%]'>
                         <h5 className='uppercase pb-[15px] tracking-[5px] font-semibold text-slate-400'>Best Skills On</h5>
@@ -162,7 +157,7 @@ export default function HomePage() {
                     />
                     <div className={`${styles.ring}`}></div>
                     <div className={`${styles.ring}`}></div>
-                    <div className={`${styles.ring}`}></div>
+                    <div className={`${styles.ring} `}></div>
                     <div className={`${styles.ring}`}></div>
                 </div>
             </div>

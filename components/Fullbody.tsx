@@ -5,6 +5,7 @@ import { useDispatch } from '@/lib/store';
 import { setActivePage } from '@/lib/features/header/headerSlice';
 import Header from './header/Header';
 import Resume from './Resume';
+import styles from '../components/header/header.module.css'
 
 export default function Fullbody() {
     const dispatch = useDispatch();
@@ -60,7 +61,7 @@ export default function Fullbody() {
                     <div className='flex justify-center items-center'>
                         <div>
                             <h6 className='text-yellow-400 font-thin text-[16px]'>1 year of  experience in web development</h6>
-                            <h1 className='text-4xl font-semibold text-slate-300 tracking-[10px] pt-[10px]'>My Resume</h1>
+                            <h1 className={`text-4xl font-semibold text-slate-300 tracking-[10px] pt-[10px]`}>My Resume</h1>
                         </div>
                     </div>
                     <Resume />
