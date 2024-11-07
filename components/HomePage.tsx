@@ -73,7 +73,7 @@ export default function HomePage() {
                     <div className='w-[50%]'>
                         <h5 className='uppercase pb-[15px] tracking-[5px] font-semibold text-slate-400'>Find with me</h5>
                         <IconContainer
-                            customClass={'shadow-yellow-400 text-yellow-400 hover:scale-[1.2] hover:text-yellow-200'}
+                            customClass={'shadow-[#f95c5c] text-[#f95c5c] hover:scale-[1.2] hover:text-white hover:shadow-white'}
                             isClickable={true}
                             onClick={openFacebookProfile}
                         >
@@ -83,7 +83,7 @@ export default function HomePage() {
                         </IconContainer>
 
                         <IconContainer
-                            customClass={'shadow-orange-400 text-orange-400 hover:scale-[1.2] hover:text-orange-200'}
+                        customClass={'shadow-[#f9e15c] text-[#f9e15c] hover:scale-[1.2] hover:text-white hover:shadow-white'}
                             onClick={openInstagramProfile}
                             isClickable={true}>
                             <RiInstagramFill
@@ -92,7 +92,7 @@ export default function HomePage() {
 
 
                         <IconContainer
-                            customClass={'shadow-green-400 text-green-400 hover:scale-[1.2] hover:text-green-200'}
+                            customClass={'shadow-[#f9a85c] text-[#f9a85c] hover:text-white hover:shadow-white'}
                             isClickable={true}
                             onClick={openLinkedInProfile}
                         >
@@ -106,7 +106,7 @@ export default function HomePage() {
                         <h5 className='uppercase pb-[15px] tracking-[5px] font-semibold text-slate-400'>Best Skills On</h5>
 
                         <IconContainer
-                            customClass={'shadow-blue-400 text-blue-400'}
+                            customClass={'shadow-[#ddf95c] text-[#ddf95c]'}
                         >
                             <RiJavascriptFill
                             />
@@ -114,7 +114,7 @@ export default function HomePage() {
                         </IconContainer>
 
                         <IconContainer
-                            customClass={'shadow-white text-white-400'}
+                            customClass={'shadow-[#9ff95c] text-[#9ff95c]'}
                         >
                             <RiCodeFill
                             />
@@ -122,7 +122,7 @@ export default function HomePage() {
 
 
                         <IconContainer
-                            customClass={'shadow-lime-400 text-lime-400'}
+                            customClass={'shadow-[#5cf99f] text-[#5cf99f]'}
                         >
                             <RiReactjsFill
                             />
@@ -130,7 +130,7 @@ export default function HomePage() {
                         </IconContainer>
 
                         <IconContainer
-                            customClass={'shadow-[#2c78f2] text-[#2c78f2]'}
+                            customClass={'shadow-[#5cf9d4] text-[#5cf9d4]'}
                         >
                             <RiHtml5Fill
                             />

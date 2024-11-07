@@ -49,7 +49,7 @@ export default function Header({ sectionRefs }: HeaderProps) {
     return (
         <header className={`${styles.header} ${isSticky ? styles.sticky : ''}`}>
             <div className="flex justify-between items-center h-[100px] px-[100px] text-[18px] font-exo_2">
-                <div className="flex flex-row items-center space-x-[10px]">
+                <div onClick={() => handleNavigation('home')} className="flex flex-row items-center space-x-[10px] cursor-pointer">
                     {/* <Image src={'/profilepic/fuad.png'} width={50} height={50} alt="" /> */}
                     <div className={styles1.imageContainer}>
                     <Image
