@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Button from '../Button';
 import { RootState, useDispatch, useSelector } from '@/lib/store';
 import { setActivePage } from '@/lib/features/header/headerSlice';
-import { useRouter } from 'next/navigation';
+import styles1 from './RotatingImageHeader.module.css';
 
 type SectionRefs = {
     home: React.RefObject<HTMLElement>;
@@ -50,7 +50,20 @@ export default function Header({ sectionRefs }: HeaderProps) {
         <header className={`${styles.header} ${isSticky ? styles.sticky : ''}`}>
             <div className="flex justify-between items-center h-[100px] px-[100px] text-[18px] font-exo_2 bg-[#212529]">
                 <div className="flex flex-row items-center space-x-[10px]">
-                    <Image src={'/profilepic/fuad.png'} width={50} height={50} alt="" />
+                    {/* <Image src={'/profilepic/fuad.png'} width={50} height={50} alt="" /> */}
+                    <div className={styles1.imageContainer}>
+                    <Image
+                        className={`${styles1.profileImage} float-right`}
+                        src="/profilepic/fuad.png"
+                        alt="fuad"
+                        width={50}
+                        height={50}
+                    />
+                    <div className={`${styles1.ring}`}></div>
+                    <div className={`${styles1.ring}`}></div>
+                    <div className={`${styles1.ring}`}></div>
+                    <div className={`${styles1.ring}`}></div>
+                </div>
                     <p className="text-[20px] font-semibold">Fuad</p>
                 </div>
                 <div className="flex flex-row space-x-2">

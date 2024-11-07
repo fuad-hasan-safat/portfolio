@@ -1,59 +1,85 @@
 .imageContainer {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    display: inline-block;
-    float: right;
-    overflow: hidden;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: inline-block;
+  float: right;
+  overflow: hidden;
+  /* Ensure anything that goes outside is hidden */
+  border-radius: 50%;
+  /* Add this to make the container circular */
+}
+
+.profileImage {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  /* Smooth scaling effect */
+}
+
+.imageContainer:hover .profileImage {
+  filter: brightness(90%);
+  transform: scale(1.1);
+  /* Scale on hover */
+
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+  --tw-shadow-color: #cbd5e1;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  animation: rotateRing 7s linear infinite;
+}
+
+/* First ring - 25% in red */
+.ring:nth-of-type(1) {
+  border-top: 10px solid #7ef44781;
+  /* Visible quarter */
+  transform: rotate(45deg);
+  /* Offset to position correctly */
+}
+
+/* Second ring - 25% in green */
+.ring:nth-of-type(2) {
+  border-right: 10px solid #fdfd54ab;
+  /* Visible quarter */
+  animation-direction: reverse;
+  transform: rotate(-45deg);
+  /* Offset to position correctly */
+}
+
+/* Third ring - 25% in orange */
+.ring:nth-of-type(3) {
+  border-bottom: 10px solid #30c1ff98;
+  /* Visible quarter */
+  transform: rotate(120deg);
+  /* Offset to position correctly */
+}
+
+/* Fourth ring - 25% in blue */
+.ring:nth-of-type(4) {
+  border-left: 10px solid #fa5eff9b;
+  /* Visible quarter */
+  animation-direction: reverse;
+  transform: rotate(-120deg);
+  /* Offset to position correctly */
+}
+
+@keyframes rotateRing {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .profileImage {
-    border-radius: 50%;
+
+  100% {
+    transform: rotate(360deg);
   }
-  
-  .ring {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 10px solid transparent;
-    animation: rotateRing 7s linear infinite;
-  }
-  
-  /* First ring - 25% in red */
-  .ring:nth-of-type(1) {
-    border-top: 10px solid #7ef44781; /* Visible quarter */
-    transform: rotate(45deg); /* Offset to position correctly */
-  }
-  
-  /* Second ring - 25% in green */
-  .ring:nth-of-type(2) {
-    border-right: 10px solid #f1f13699; /* Visible quarter */
-    animation-direction: reverse;
-    transform: rotate(-45deg); /* Offset to position correctly */
-  }
-  
-  /* Third ring - 25% in orange */
-  .ring:nth-of-type(3) {
-    border-bottom: 10px solid #30c1ff98; /* Visible quarter */
-    transform: rotate(120deg); /* Offset to position correctly */
-  }
-  
-  /* Fourth ring - 25% in blue */
-  .ring:nth-of-type(4) {
-    border-left: 10px solid #fa5eff9b; /* Visible quarter */
-    animation-direction: reverse;
-    transform: rotate(-120deg); /* Offset to position correctly */
-  }
-  
-  @keyframes rotateRing {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
+}

@@ -1,0 +1,64 @@
+.imageContainer {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    float: right;
+    overflow: hidden;
+    border-radius: 50%; 
+  }
+  
+  .profileImage {
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  .imageContainer:hover .profileImage {
+    transform: scale(1.3); /* Scale on hover */
+  }
+  
+  .ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    animation: rotateRing 7s linear infinite;
+  }
+  
+  /* First ring - 25% in red */
+  .ring:nth-of-type(1) {
+    border-top: 10px solid #7ef44781; /* Visible quarter */
+    transform: rotate(45deg); /* Offset to position correctly */
+  }
+  
+  /* Second ring - 25% in green */
+  .ring:nth-of-type(2) {
+    border-right: 10px solid #f1f13699; /* Visible quarter */
+    animation-direction: reverse;
+    transform: rotate(-45deg); /* Offset to position correctly */
+  }
+  
+  /* Third ring - 25% in orange */
+  .ring:nth-of-type(3) {
+    border-bottom: 10px solid #30c1ff98; /* Visible quarter */
+    transform: rotate(120deg); /* Offset to position correctly */
+  }
+  
+  /* Fourth ring - 25% in blue */
+  .ring:nth-of-type(4) {
+    border-left: 10px solid #fa5eff9b; /* Visible quarter */
+    animation-direction: reverse;
+    transform: rotate(-120deg); /* Offset to position correctly */
+  }
+  
+  @keyframes rotateRing {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

@@ -1,5 +1,7 @@
 "use client";
 import React, { ReactNode } from 'react';
+import { motion } from "framer-motion"
+
 type IconProps = {
   children: ReactNode; // The icons to render
   onClick?: () => void; // Optional click handler for clickable icons
@@ -7,9 +9,12 @@ type IconProps = {
   customClass?: string; // Custom class for styling
 };
 
-const IconContainer: React.FC<IconProps> = ({ children, onClick, isClickable = false, customClass='' }) => {
+const IconContainer: React.FC<IconProps> = ({ children, onClick, isClickable = false, customClass = '' }) => {
   return (
-    <div
+    <motion.button
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      animate={{ scale: 1, transition: { duration: 0.2 }, opacity: 1 }}
       className={`icon-container shadow-lg  ${customClass} ${isClickable ? 'clickable' : ''}`}
       onClick={isClickable ? onClick : undefined}
       style={{
@@ -22,7 +27,7 @@ const IconContainer: React.FC<IconProps> = ({ children, onClick, isClickable = f
       }}
     >
       {children}
-    </div>
+    </motion.button>
   );
 };
 
