@@ -12,11 +12,11 @@
     "npm:eslint-config-next@15.0.2": "15.0.2_eslint@8.57.1_typescript@5.6.3_@typescript-eslint+parser@8.13.0__eslint@8.57.1__typescript@5.6.3_eslint-plugin-import@2.31.0__eslint@8.57.1",
     "npm:eslint@8": "8.57.1",
     "npm:framer-motion@^11.11.11": "11.11.11",
-    "npm:next@15.0.2": "15.0.2_react@19.0.0-rc-02c0e824-20241028_react-dom@19.0.0-rc-02c0e824-20241028__react@19.0.0-rc-02c0e824-20241028",
+    "npm:next@15.0.2": "15.0.2_react@18.3.1_react-dom@18.3.1__react@18.3.1",
     "npm:postcss@8": "8.4.47",
-    "npm:react-dom@19.0.0-rc-02c0e824-20241028": "19.0.0-rc-02c0e824-20241028_react@19.0.0-rc-02c0e824-20241028",
+    "npm:react-dom@^18.3.1": "18.3.1_react@18.3.1",
     "npm:react-redux@^9.1.2": "9.1.2_@types+react@18.3.12_react@18.3.1",
-    "npm:react@19.0.0-rc-02c0e824-20241028": "19.0.0-rc-02c0e824-20241028",
+    "npm:react@^18.3.1": "18.3.1",
     "npm:tailwindcss@^3.4.1": "3.4.14_postcss@8.4.47",
     "npm:typescript@5": "5.6.3"
   },
@@ -143,7 +143,7 @@
         "@emotion/utils",
         "@emotion/weak-memoize",
         "hoist-non-react-statics",
-        "react@18.3.1"
+        "react"
       ]
     },
     "@emotion/serialize@1.3.2": {
@@ -165,7 +165,7 @@
     "@emotion/use-insertion-effect-with-fallbacks@1.1.0_react@18.3.1": {
       "integrity": "sha512-+wBOcIV5snwGgI2ya3u99D7/FJquOIniQT1IKyDsBmEgwvpxMNeS65Oib7OnE2d2aY+3BU4OiH+0Wchf8yk3Hw==",
       "dependencies": [
-        "react@18.3.1"
+        "react"
       ]
     },
     "@emotion/utils@1.4.1": {
@@ -351,8 +351,8 @@
         "clsx",
         "csstype",
         "prop-types",
-        "react@18.3.1",
-        "react-dom@18.3.1_react@18.3.1",
+        "react",
+        "react-dom",
         "react-is@18.3.1",
         "react-transition-group"
       ]
@@ -364,7 +364,7 @@
         "@mui/utils",
         "@types/react",
         "prop-types",
-        "react@18.3.1"
+        "react"
       ]
     },
     "@mui/styled-engine@6.1.6_react@18.3.1": {
@@ -376,7 +376,7 @@
         "@emotion/sheet",
         "csstype",
         "prop-types",
-        "react@18.3.1"
+        "react"
       ]
     },
     "@mui/system@6.1.6_@types+react@18.3.12_react@18.3.1": {
@@ -391,7 +391,7 @@
         "clsx",
         "csstype",
         "prop-types",
-        "react@18.3.1"
+        "react"
       ]
     },
     "@mui/types@7.2.19_@types+react@18.3.12": {
@@ -409,7 +409,7 @@
         "@types/react",
         "clsx",
         "prop-types",
-        "react@18.3.1",
+        "react",
         "react-is@18.3.1"
       ]
     },
@@ -484,7 +484,7 @@
     "@remixicon/react@4.5.0_react@18.3.1": {
       "integrity": "sha512-Xr20SxMpRNlgXZnoF5BCMyZuQEhXY3yJCyms8kxB/vJCCiV1nWdiO48XqRG5LBd1192iSHC4m658AIWi6rmBFg==",
       "dependencies": [
-        "react@18.3.1"
+        "react"
       ]
     },
     "@rtsao/scc@1.1.0": {
@@ -1946,7 +1946,7 @@
     "natural-compare@1.4.0": {
       "integrity": "sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw=="
     },
-    "next@15.0.2_react@19.0.0-rc-02c0e824-20241028_react-dom@19.0.0-rc-02c0e824-20241028__react@19.0.0-rc-02c0e824-20241028": {
+    "next@15.0.2_react@18.3.1_react-dom@18.3.1__react@18.3.1": {
       "integrity": "sha512-rxIWHcAu4gGSDmwsELXacqAPUk+j8dV/A9cDF5fsiCMpkBDYkO2AEaL1dfD+nNmDiU6QMCFN8Q30VEKapT9UHQ==",
       "dependencies": [
         "@next/env",
@@ -1963,8 +1963,8 @@
         "busboy",
         "caniuse-lite",
         "postcss@8.4.31",
-        "react@19.0.0-rc-02c0e824-20241028",
-        "react-dom@19.0.0-rc-02c0e824-20241028_react@19.0.0-rc-02c0e824-20241028",
+        "react",
+        "react-dom",
         "sharp",
         "styled-jsx"
       ]
@@ -2191,15 +2191,8 @@
       "integrity": "sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==",
       "dependencies": [
         "loose-envify",
-        "react@18.3.1",
-        "scheduler@0.23.2"
-      ]
-    },
-    "react-dom@19.0.0-rc-02c0e824-20241028_react@19.0.0-rc-02c0e824-20241028": {
-      "integrity": "sha512-LrZf3DfHL6Fs07wwlUCHrzFTCMM19yA99MvJpfLokN4I2nBAZvREGZjZAn8VPiSfN72+i9j1eL4wB8gC695F3Q==",
-      "dependencies": [
-        "react@19.0.0-rc-02c0e824-20241028",
-        "scheduler@0.25.0-rc-02c0e824-20241028"
+        "react",
+        "scheduler"
       ]
     },
     "react-is@16.13.1": {
@@ -2213,7 +2206,7 @@
       "dependencies": [
         "@types/react",
         "@types/use-sync-external-store",
-        "react@18.3.1",
+        "react",
         "use-sync-external-store"
       ]
     },
@@ -2224,8 +2217,8 @@
         "dom-helpers",
         "loose-envify",
         "prop-types",
-        "react@18.3.1",
-        "react-dom@18.3.1_react@18.3.1"
+        "react",
+        "react-dom"
       ]
     },
     "react@18.3.1": {
@@ -2233,9 +2226,6 @@
       "dependencies": [
         "loose-envify"
       ]
-    },
-    "react@19.0.0-rc-02c0e824-20241028": {
-      "integrity": "sha512-GbZ7hpPHQMiEu53BqEaPQVM/4GG4hARo+mqEEnx4rYporDvNvUjutiAFxYFSbu6sgHwcr7LeFv8htEOwALVA2A=="
     },
     "read-cache@1.0.0": {
       "integrity": "sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==",
@@ -2344,9 +2334,6 @@
       "dependencies": [
         "loose-envify"
       ]
-    },
-    "scheduler@0.25.0-rc-02c0e824-20241028": {
-      "integrity": "sha512-GysnKjmMSaWcwsKTLzeJO0IhU3EyIiC0ivJKE6yDNLqt3IMxDByx8b6lSNXRNdN+ULUY0WLLjSPaZ0LuU/GnTg=="
     },
     "semver@6.3.1": {
       "integrity": "sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA=="
@@ -2528,11 +2515,11 @@
     "strip-json-comments@3.1.1": {
       "integrity": "sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig=="
     },
-    "styled-jsx@5.1.6_react@19.0.0-rc-02c0e824-20241028": {
+    "styled-jsx@5.1.6_react@18.3.1": {
       "integrity": "sha512-qSVyDTeMotdvQYoHWLNGwRFJHC+i+ZvdBRYosOFgC+Wg1vx4frN2/RG/NA7SYqqvKNLf39P2LSRA2pu6n0XYZA==",
       "dependencies": [
         "client-only",
-        "react@19.0.0-rc-02c0e824-20241028"
+        "react"
       ]
     },
     "stylis@4.2.0": {
@@ -2704,7 +2691,7 @@
     "use-sync-external-store@1.2.2_react@18.3.1": {
       "integrity": "sha512-PElTlVMwpblvbNqQ82d2n6RjStvdSoNe9FG28kNfz3WiXilJm4DdNkEzRhCZuIDwY8U08WVihhGR5iRqAwfDiw==",
       "dependencies": [
-        "react@18.3.1"
+        "react"
       ]
     },
     "util-deprecate@1.0.2": {
@@ -2810,9 +2797,9 @@
         "npm:framer-motion@^11.11.11",
         "npm:next@15.0.2",
         "npm:postcss@8",
-        "npm:react-dom@19.0.0-rc-02c0e824-20241028",
+        "npm:react-dom@^18.3.1",
         "npm:react-redux@^9.1.2",
-        "npm:react@19.0.0-rc-02c0e824-20241028",
+        "npm:react@^18.3.1",
         "npm:tailwindcss@^3.4.1",
         "npm:typescript@5"
       ]
