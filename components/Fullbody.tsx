@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useRef } from 'react';
-import HomePage from "./HomePage.tsx";
-import { useDispatch } from '../lib/store.ts';
-import { setActivePage } from "../lib/features/header/headerSlice.ts";
-import Header from "./header/Header.tsx";
-import Resume from "./Resume.tsx";
+import HomePage from "./HomePage";
+import { useDispatch } from '../lib/store';
+import { setActivePage } from "../lib/features/header/headerSlice";
+import Header from "./header/Header";
+import Resume from "./Resume";
 
 export default function Fullbody() {
     const dispatch = useDispatch();

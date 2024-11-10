@@ -1,4 +1,6 @@
 "use client";
+
+import { motion } from 'framer-motion';
 import React from 'react';
 
 type ButtonProps = {
@@ -24,13 +26,19 @@ const Button: React.FC<ButtonProps> = ({
           : 'text-[#878584] font-semibold rounded hover:text-[#fffcfa]';
 
   return (
-    <button
+    <motion.button
+      whileHover={{
+        scale: 1.2,
+        transition: { duration: 2, delay: 1, ease: 'easeInOut' },
+        
+      }}
+      whileTap={{ scale: 0.9 }}
       type={type}
       onClick={onClick}
       className={`px-4 py-2 ${typeClass} ${className}`}
     >
       {text}
-    </button>
+    </motion.button>
   );
 };
 
