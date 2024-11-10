@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import IconContainer from './IconContainer';
+import IconContainer from "./IconContainer.tsx";
 import {
     RiFacebookBoxFill,
     RiInstagramFill,
