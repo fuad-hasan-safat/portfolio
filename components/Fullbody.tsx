@@ -1,18 +1,19 @@
 "use client";
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import HomePage from "./HomePage";
 import { useDispatch } from '../lib/store';
 import { setActivePage } from "../lib/features/header/headerSlice";
 import Header from "./header/Header";
 import Resume from "./Resume";
+import StartUpAnimation from './StartUpAnimation';
 
 export default function Fullbody() {
     const dispatch = useDispatch();
-    const sectionRefs: { 
-        home: React.RefObject<HTMLElement>; 
-        about: React.RefObject<HTMLElement>; 
-        resume: React.RefObject<HTMLElement>; 
-        contact: React.RefObject<HTMLElement>; 
+    const sectionRefs: {
+        home: React.RefObject<HTMLElement>;
+        about: React.RefObject<HTMLElement>;
+        resume: React.RefObject<HTMLElement>;
+        contact: React.RefObject<HTMLElement>;
     } = {
         home: useRef<HTMLElement>(null),
         about: useRef<HTMLElement>(null),
@@ -20,6 +21,15 @@ export default function Fullbody() {
         contact: useRef<HTMLElement>(null),
     };
 
+    const [showAnimation, setShowAnimation] = useState(true);
+
+    useEffect(() => {
+        // Set a timer for the duration of your animation in milliseconds
+        const timer = setTimeout(() => setShowAnimation(false), 2000); // 5 seconds
+
+        // Clear the timer if the component unmounts before the animation completes
+        return () => clearTimeout(timer);
+    }, []);
 
     useEffect(() => {
         const handleIntersection = (entries: IntersectionObserverEntry[]) => {
@@ -45,7 +55,12 @@ export default function Fullbody() {
         };
     }, [dispatch]);
 
+    if (showAnimation) {
+        return <StartUpAnimation />
+    }
+
     return (
+
         <>
             <Header sectionRefs={sectionRefs} />
             <div id='fullcombinepage' className='px-[200px] relative'>

@@ -23,16 +23,16 @@ const Button: React.FC<ButtonProps> = ({
         ? 'bg-green-500 text-white font-semibold rounded hover:bg-green-600'
         : type === 'reset'
           ? 'bg-red-500 text-white font-semibold rounded hover:bg-red-600'
-          : 'text-[#878584] font-semibold rounded hover:text-[#fffcfa]';
+          : ' font-semibold rounded ';
 
   return (
     <motion.button
       whileHover={{
-        scale: 1.2,
-        transition: { duration: 2, delay: 1, ease: 'easeInOut' },
+        scale: 1.1,
+        transition: { duration: 1, delay: 0.1, ease: 'easeInOut' },
         
       }}
-      whileTap={{ scale: 0.9 }}
+      whileTap={{ scale: 1 }}
       type={type}
       onClick={onClick}
       className={`px-4 py-2 ${typeClass} ${className}`}

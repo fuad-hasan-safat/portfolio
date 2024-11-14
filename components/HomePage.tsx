@@ -65,9 +65,8 @@ export default function HomePage() {
                     a <span className='transition-all ease-in-out duration-300 uppercase text-slate-300'>{currentWord}</span>
                     <span className="ml-1 typing-cursor text-gray-400 font-extralight">|</span>
                 </h1>
-                <p className='text-[18px] font-exo_2 pt-[15px] '>
-                    I use animation as a third dimension by which to simplify experiences and kuiding thro each and every interaction. I’m not adding motion just to spruce things up, but doing it in ways that.
-                </p>
+                <p className='text-[18px] font-exo_2 pt-[15px] text-justify'>
+                Enthusiastic and dedicated software developer seeking an opportunity to apply my strong technical skills and passion for coding to effectively contribute to innovative software projects. I am eager to collaborate with a dynamic team of professionals to enhance my knowledge, grow as a software engineer, and deliver cutting-edge solutions that drive technological advancements in the industry. As a driven learner, I aspire to refine my skills under the mentorship of experienced developers and actively contribute to process enhancement within the team.                </p>
 
                 <section id='sociallink' className='flex w-full flex-wrap content-between items-center pt-[100px]'>
                     <div className="w-[50%]">
